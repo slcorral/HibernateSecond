@@ -8,7 +8,6 @@ import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.hibernate.cfg.AnnotationConfiguration;
 
 /**
  *
@@ -31,7 +30,8 @@ public class Main {
     
     private void iniciaOperacion()
     {
-        SessionFactory sessionFactory= new AnnotationConfiguration().configure().buildSessionFactory();
+        //SessionFactory sessionFacto0ry= new AnnotationConfiguration().configure().buildSessionFactory();
+        SessionFactory sessionFactory=null;
         sesion= sessionFactory.openSession();
         sesion.getTransaction().begin();
     }
